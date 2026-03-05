@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Education - James Barbret</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    /* --- Your Original Base Styles --- */
+    body { 
+        background-color: #fffaf6; 
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    .container {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .edu-header { 
+        padding: 16px 0; 
+        border-bottom: 1px solid rgba(0,0,0,0.04); 
+    }
+    
+    /* --- Timeline CSS --- */
+    
+    .timeline {
+        position: relative;
+        max-width: 1000px;
+        margin: 40px auto;
+        padding: 20px 0; /* Add space for labels */
+    }
+
+    /* The vertical line */
+    .timeline::after {
+        content: '';
+        position: absolute;
+        width: 4px;
+        background-color: #dcdcdc;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        margin-left: -2px;
+        border-radius: 2px;
+        z-index: 0; /* Behind the labels */
+    }
+
+    /* --- Timeline Start/End Labels --- */
+    .timeline-label {
+        background: #2b5d34; /* Your Green */
+        color: white;
+        width: fit-content;
+        padding: 8px 20px;
+        border-radius: 50px;
+        margin: 0 auto; /* Centers it */
+        position: relative;
+        z-index: 2; /* Sits on top of the line */
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 0.85rem;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        text-align: center;
+    }
+
+    .timeline-label.top { margin-bottom: 30px; }
+    .timeline-label.bottom { margin-top: 30px; }
+
+    /* --- Timeline Items --- */
+    .school {
+        padding: 10px 40px;
+        position: relative;
+        width: 50%;
+        box-sizing: border-box;
+        background: transparent;
+    }
+
+    .school-content {
+        padding: 20px;
+        background: #fff;
+        border-radius: 8px;
+        position: relative;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        border: 1px solid rgba(0,0,0,0.05);
+    }
+
+    .school h3 {
+        margin-top: 0;
+        color: #2b5d34;
+        font-size: 1.1rem;
+    }
+
+    .school p {
+        margin-bottom: 0;
+        color: #555;
+        line-height: 1.5;
+    }
+
+    /* The Dot on the line */
+    .school::after {
+        content: '';
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        right: -8px; 
+        background-color: #fff;
+        border: 4px solid #2b5d34;
+        top: 20px;
+        border-radius: 50%;
+        z-index: 1;
+    }
+
+    /* Left and Right positioning */
+    .school.left { left: 0; }
+    .school.right { left: 50%; }
+
+    .school.right::after { left: -8px; }
+
+    /* Arrows */
+    .school.left .school-content::before {
+        content: " ";
+        height: 0; position: absolute; top: 22px; width: 0; z-index: 1;
+        right: -10px;
+        border: medium solid white;
+        border-width: 10px 0 10px 10px;
+        border-color: transparent transparent transparent #fff;
+    }
+    .school.right .school-content::before {
+        content: " ";
+        height: 0; position: absolute; top: 22px; width: 0; z-index: 1;
+        left: -10px;
+        border: medium solid white;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent #fff transparent transparent;
+    }
+
+    /* --- Footer Elements --- */
+    .sub-links { text-align: center; padding: 30px 0; }
+    .sub-links a { color: #2b5d34; text-decoration: none; font-weight: bold; margin: 0 10px; }
+    .sub-links a:hover { text-decoration: underline; }
+
+    .image-grid { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-top: 20px; }
+    .image-grid img { max-width: 45%; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+    
+    #site-footer { text-align: center; padding: 40px 0; color: #888; font-size: 0.9rem; }
+
+    /* --- Mobile Responsive --- */
+    @media screen and (max-width: 768px) {
+        .timeline::after { left: 31px; }
+        .timeline-label { margin-left: 0; } /* Align labels left to match line */
+        
+        .school { width: 100%; padding-left: 70px; padding-right: 25px; }
+        .school.right { left: 0%; }
+
+        .school::after { left: 21px; } 
+        .school.right::after { left: 21px; }
+
+        .school.right .school-content::before {
+            left: auto; right: 100%; 
+            border-width: 10px 10px 10px 0;
+            border-color: transparent #fff transparent transparent; 
+        }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div id="site-title">James Barbret</div>
+    <div id="page-subtitle">Education</div>
+
+    
+      <nav class="navbar">
+  <a href="index.html">Home</a>
+  <a href="education.html" class="active">Education</a>
+  <a href="work.html">Work Experience</a>
+  <a href="portfolio.html">Portfolio</a>
+  <a href="service.html">Service</a>
+  <a href="hobbies.html">Hobbies</a>
+</nav>
+
+    <section class="edu-header">
+      <h2 class="highlight" style="text-align:center;">Education Timeline</h2>
+      
+      <div class="timeline">
+        
+        <div class="timeline-label top">Current</div>
+
+        <div class="school left">
+            <div class="school-content">
+                <h3>Central Michigan University - Bachelor's Degree / 2022-2026 (expected graduation)</h3>
+            <p>I am the youngest member of a proud CMU family, following in the footsteps of my sister, brother-in-law, both my parents, and one aunt and uncle, who are all CMU alums.</p>
+            </div>
+        </div>
+
+        <div class="school right">
+            <div class="school-content">
+                <h3>Macomb Community College - Associates Degree / 2019-2021</h3>
+            <p>
+                I started at MCC through a program called Early College of Macomb, where certain students could take replacement courses
+                at the community college that awarded credits toward their high school requirements as well as college credits.
+            </p>
+            </div>
+        </div>
+
+        <div class="school left">
+            <div class="school-content">
+                <h3>Roseville High School - High School Diploma / 2016-2020</h3>
+            <p>
+                At RHS (different building from the middle school), I played soccer, marched in the drumline of the marching band, bowled on the JV team, was part of the National Honors Society,
+                and took multiple AP classes. Then, I finished out my senior year during the start of the COVID-19 Pandemic without a prom and with a drive-by graduation
+                for which I hopped out of my parents car for 30 seconds in my cap and gown to get a picture.
+            </p>
+            </div>
+        </div>
+
+        <div class="school right">
+            <div class="school-content">
+                <h3>Roseville Middle School - 2013-2016</h3>
+            <p>Long before I was here, the middle school had been Roseville High School, where my dad went to school.</p>
+            </div>
+        </div>
+
+        <div class="school left">
+            <div class="school-content">
+                <h3>Steenland Elementary - 2009-2013</h3>
+            <p>This elementary school was freshly built in our community following the planned demolition of the old schools, making me one of the first students to ever attend it.</p>
+            </div>
+        </div>
+
+        <div class="school right">
+            <div class="school-content">
+                <h3>Lincoln Elementary - 2007-2009</h3>
+            <p>I started school at Lincoln just before it was torn down. It was the very same elementary school that my grandpa, born in 1917, attended.</p>
+            </div>
+        </div>
+
+        <div class="timeline-label bottom">The Beginning</div>
+
+      </div> <div class="sub-links">
+        <a href="edu_cmu.html">My current classes</a>
+        <span style="color:#ccc">|</span>
+        <a href="https://www.cmich.edu" target="_blank">CMU official site (external)</a>
+      </div>
+
+      <div class="image-grid">
+        <img src="images/FireUpFamily.jpg" alt="James with, left to right, his brother-in-law, sister, mom, and dad">
+        <img src="images/StageGrad.jpg" alt="James receives his diploma during lock down">
+      </div>
+    </section>
+
+    <footer id="site-footer">© 2025 James Barbret</footer>
+  </div>
+
+</body>
+</html>

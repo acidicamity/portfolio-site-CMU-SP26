@@ -1,0 +1,160 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Portfolio - James Barbret</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    /* --- Base Styles (Matches your other pages) --- */
+    body { background-color: #fff8ff; }
+    .hobby { margin-top:12px; padding:12px; border-radius:8px; background:#fff; }
+    .hobby h3 { color:#5a2b8f; }
+    
+    
+
+    /* --- Portfolio Grid Styles --- */
+    .portfolio-grid {
+        display: grid;
+        /* This creates a grid that auto-fits items (at least 300px wide) */
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        margin-top: 30px;
+    }
+
+    .project-card {
+        background: #fff;
+        border-radius: 12px;
+        overflow: hidden; /* Keeps images inside rounded corners */
+        box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border: 1px solid rgba(0,0,0,0.05);
+    }
+
+    .project-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    }
+
+    /* Media Containers */
+    .media-wrapper {
+        width: 100%;
+        height: 200px;
+        background-color: #eee;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .media-wrapper img, 
+    .media-wrapper video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Ensures image covers area without stretching */
+    }
+
+    /* Content Styling */
+    .card-content {
+        padding: 20px;
+    }
+
+    .card-content h3 {
+        margin-top: 0;
+        color: #2b5d34; /* Your Green */
+        margin-bottom: 10px;
+    }
+
+    .card-content p {
+        color: #555;
+        font-size: 0.95rem;
+        line-height: 1.5;
+        margin-bottom: 15px;
+    }
+
+    .project-link {
+        display: inline-block;
+        text-decoration: none;
+        color: #2b5d34;
+        font-weight: bold;
+        border: 2px solid #2b5d34;
+        padding: 8px 16px;
+        border-radius: 4px;
+        transition: background 0.3s, color 0.3s;
+    }
+
+    .project-link:hover {
+        background: #2b5d34;
+        color: white;
+    }
+
+    
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div id="site-title">James Barbret</div>
+    <div id="page-subtitle">Portfolio</div>
+
+    <nav class="navbar">
+      <a href="index.html">Home</a>
+      <a href="education.html">Education</a>
+      <a href="work.html">Work Experience</a>
+      <a href="portfolio.html" class="active">Portfolio</a>
+      <a href="service.html">Service</a>
+      <a href="hobbies.html">Hobbies</a>
+    </nav>
+
+    <section>
+      
+      <div class="portfolio-grid">
+        
+        <div class="project-card">
+            <div class="media-wrapper">
+                <video controls>
+                    <source src="videos/FarmGame.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="card-content">
+                <h3>Farming Game Development Project</h3>
+                <p>This was a small game I helped develop in Unity 3D. I setup the farm scene with tiles and tools.</p>
+                <a href="#" class="project-link">View Details</a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="media-wrapper">
+                <video controls>
+                    <source src="videos/Drum Set Ball Bounce Course.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="card-content">
+                <h3>3D Drumset Animation in Autodesk Maya</h3>
+                <p>This is drumset model, animation, and basic drum beat that I created.</p>
+                <a href="#" class="project-link">Watch Larger Window</a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="media-wrapper">
+                <video controls>    
+                    <source src="videos/Barbret_Rocket_Render.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="card-content">
+                <h3>3D Bee Hive-Style Rocket</h3>
+                <p>Mockups created for a mobile application concept. Focused on user flow and accessibility.</p>
+                <a href="#" class="project-link">See Designs</a>
+            </div>
+        </div>
+
+        </div>
+    </section>
+
+    <footer id="site-footer">© 2025 James Barbret</footer>
+  </div>
+
+</body>
+</html>
